@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ===== Reset CSS Global - Moderno e Eficiente ===== */
+
+/* Box sizing border-box para todos os elementos */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove margens padrão */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Altura 100% para body e html */
+html, body {
+  height: 100%;
+}
+
+/* Tipografia básica */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Remove estilos padrão de listas */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove decoração de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove estilos padrão de botões e inputs */
+button, input, textarea, select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Garantir que imagens não ultrapassem os limites do container */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove animações e transições para pessoas com redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Define base para elementos interativos */
+button {
+  cursor: pointer;
+}
+
+/* Evita zoom automático em inputs no iOS */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+textarea {
+  font-size: 16px;
+}
+
+/* Define estilo consistente para elementos de formulário */
+input, textarea, select {
+  border-radius: 0;
+}
+
+/* Garante que os elementos ocupem toda a largura no layout flex/grid */
+:where(html, body, #__next) {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Normalize scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
